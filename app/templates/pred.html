@@ -1,0 +1,85 @@
+<h1>Welcome to the polish companies bankruptcy predictors </h1>
+
+<p>Please fill in the following form to know whether your company is expected to prosper or not</p>
+
+{% block page_content %}
+
+{% from "_formhelpers.html" import render_field %}
+
+
+<form method="POST" action="/predict">
+    <div>
+        <label for="Attr16">(gross profit + depreciation) / total liabilities </label>:
+        <input class="css_class" id="Attr16" name="Attr16" type="text" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+
+        <label for="Attr25">(equity - share capital) / total assets </label>:
+        
+        <input id="Attr25" name="Attr25" type="Attr25" value="" />
+    </div>
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr33">operating expenses / short-term liabilities </label>
+        <input id="Attr33" name="Attr33" type="Attr33" value="" />
+    </div>
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr40">(current assets - inventory - receivables) / short-term liabilities </label>
+        <input id="Attr40" name="Attr40" type="Attr40" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr46">(current assets - inventory) / short-term liabilities </label>
+        <input id="Attr46" name="Attr46" type="Attr46" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr63">sales / short-term liabilities </label>
+        <input id="Attr63" name="Attr63" type="Attr63" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="year">Year of the study (between 2007 and 2012) <br>
+            <input type="radio" id="1" name="year" value="1">
+            <label for="1">1st</label><br>
+            <input type="radio" id="2" name="year" value="2">
+            <label for="2">2nd</label><br>
+            <input type="radio" id="3" name="year" value="3">
+            <label for="3">3rd</label><br>
+            <input type="radio" id="4" name="year" value="4">
+            <label for="4">4th</label><br>
+            <input type="radio" id="5" name="year" value="5">
+            <label for="5">5th</label><br>
+        </label>
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <input type="Submit" value="Predict">
+      </div>
+</form>
+
+{% endblock %}
+
+    
+   
